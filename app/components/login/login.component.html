@@ -1,0 +1,28 @@
+<h2> Welcome to Teddy Bear Terra Firma</h2>
+<form>
+    <div class="imgcontainer">
+      <img src="assets/images/Teddy_log.jpg" alt="Avatar" class="avatar">
+    </div>
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required [(ngModel)]="uname">
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required [(ngModel)]="psw">
+      <div *ngIf="!isLoggingIn">
+        <label for="email"><b>Email</b></label>
+        <input type="email" placeholder="Enter Email" name="email" required [(ngModel)]="email">
+      </div>
+      <button type="submit"  (click)="onSubmit()">{{ submitButtonText }}</button>
+      <p style="margin-left:47%;margin-right: 47%;">or</p>
+      <button style="background-color: gainsboro;color:black;" type="submit" 
+        (click)="onToggle()">{{ toggleButtonText }}
+      </button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+    <div class="container" style="background-color:#f1f1f1;height:auto;">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+</form>

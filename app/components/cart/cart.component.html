@@ -1,0 +1,34 @@
+<div class="cartContainer">
+    <div class="sidebarContainer">
+            <h3>total price</h3>
+            <h3>${{ totalPrice }}</h3>
+            <button class="sidebar-button" (click)="handleGoToCheckout()">Continue To Checkout</button>
+            <button class="sidebar-button" (click)="handleClearCart()">Clear Cart</button>
+    </div>
+
+    <div class="cartMainContainer">
+        <div class="interatedContainer" *ngFor="let item of _itemsInCart">
+            <img src="{{item.productImage}}" alt="product image">
+            <div class="productNameDescription">
+                <h1 class="productName">{{item.productName}}</h1>
+                <p class="productDescription">
+                    {{item.productDescription}}
+                </p>
+            </div>
+            <div class="priceAddToCart">
+                <div class="price">
+                    <!-- <p *ngIf="item.onSale" style="color:red">sale price</p>
+                    <p *ngIf="!product.onSale">price</p> -->
+                    <p>price</p>
+                    <p>${{item.productPrice}}</p>
+                </div>
+                <div class="quantity">
+                    <p>quantity</p>
+                    <!-- <input type="number" [(ngModel)]="product.numAddedToCart"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

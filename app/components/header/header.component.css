@@ -1,0 +1,23 @@
+.header-container {
+    height: 126px;
+    width: 100%;
+    background-color: #4F5CD7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-profile {
+    font-size: xx-large;
+    color: #FFFFFF
+
+}
+
+.header-title {
+    font-size: xx-large;
+    color: #FFFFFF
+}
+
+.header-action {
+    
+}

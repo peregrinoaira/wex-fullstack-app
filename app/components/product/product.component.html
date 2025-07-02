@@ -1,0 +1,23 @@
+<!-- assets/images/jpg/Costume Bears/costume (2).jpg -->
+
+<div class="productContainer">
+    <img src="{{product.productImage}}" alt="product image">
+    <div class="productNameDescription">
+        <h1 class="productName">{{product.productName}}</h1>
+        <p class="productDescription">
+            {{product.productDescription}}
+        </p>
+    </div>
+    <div class="priceAddToCart">
+        <div class="price">
+            <p *ngIf="product.onSaleId isNull" style="color:red">sale price</p>
+            <p *ngIf="product.onSaleId">price</p>
+            <p>${{product.productPrice}}</p>
+        </div>
+        <div class="quantity">
+            <p>quantity</p>
+            <input type="number" [(ngModel)]="numAddedToCart">
+        </div>
+        <h4 class="addToCartBtn" (click)="sendAddToCartToParent(product, numAddedToCart)">add to cart</h4>
+    </div>
+</div>

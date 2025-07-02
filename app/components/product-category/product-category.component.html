@@ -1,0 +1,14 @@
+<div class="productCategory">
+    <input type="text" [(ngModel)]="newCategoryName">
+    <button (click)="handleAddCategory(newCategoryName)">add category</button>
+    <div *ngFor="let category of categories">
+        
+        <p>{{category.categoryName}}</p>
+        <input *ngIf="toggle === category.id" type="text" placeholder="changes go here" [(ngModel)]="changesToCategory">
+        <button  *ngIf="toggle === category.id" (click)="handleCancelEdit()">cancel</button>
+        <button  *ngIf="toggle === category.id" (click)="handleSubmitEdit(changesToCategory, category.id)">submit</button>
+
+        <button [hidden]="toggle === category.id" (click)="handleEditCategory(category.id)">edit</button>
+        <button (click)="handleDeleteCategory(category.id)">delete</button>
+    </div>
+</div>

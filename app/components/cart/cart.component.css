@@ -1,0 +1,21 @@
+.cartContainer {
+    display: flex;
+}
+.sidebarContainer {
+    background-color: #4F5CD7;
+    width: 20vw;
+    height: 78vh;
+    display: flex;
+    color: #FFFFFF;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cartMainContainer {
+    background-color: #7D92DB;
+    color: #252243;
+    width: 80vw;
+    height: 78vh;
+    overflow-y: auto;
+    
+}

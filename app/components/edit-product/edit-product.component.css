@@ -1,0 +1,46 @@
+.container{
+    width: 1200px;
+    height: 300px;
+    border-style: solid 1px;
+    border-color: black;
+    background-color: #7D92DB;
+    display: flex;
+    margin: auto;
+}
+.side-bar{
+    width: 20vw;
+    height: 80vh;
+    background-color: #4F5CD7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.img{
+    float: left;
+    background-color:#7D92DB;
+    height: 250px;
+    width: 20%;
+    margin:2px;
+}
+.description{
+    float: right ;
+    height: 250px;
+    width: 70%;
+    margin: 2px;
+    background-color: #4F5CD7;
+}
+.detail{
+  margin-top: 20px;
+  margin: 2px;
+  float:right;
+  
+  width: 100px;
+  height: 250px;
+  text-align: center;
+}
+
+
+
+
+  

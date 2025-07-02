@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="side-bar"></div>
+    <ng-container>
+        <p class="userName" *ngFor="let order of orders" (click)="handleSeeOrder(order)">
+          {{order.orderNumId}}
+        <p>
+    </ng-container>
+    
+    <!-- This is the main for the edit-users field -->
+    <div class="PriorOrdersMain">
+      <p>Prior Orders</p>
+        <h4>{{selectedOrderHistory.orderNumId}}</h4>
+        <div *ngFor="let orderDetails of selectedOrderHistory.orderDetailsList">
+          <div>{{orderDetails.productName}}</div>
+          <div>{{orderDetails.productDescription}}</div>
+          <div>{{orderDetails.productPrice}}</div>
+          <div>{{orderDetails.quantity}}</div>
+          <hr>
+        </div>
+    </div>
+</div>

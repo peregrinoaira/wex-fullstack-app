@@ -1,0 +1,9 @@
+<div class="header-container">
+    <div class="header-profile">{{ currentUser.username }}</div>
+    <div class="header-title">TEDDY BEAR, INC.</div>
+    <div class="header-action">
+        <button *ngIf="currentUser.username !== 'Guest'" (click)="onLogout()">
+            <mat-icon>exit_to_app</mat-icon>
+        </button>        
+    </div>
+</div>

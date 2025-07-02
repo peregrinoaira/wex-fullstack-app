@@ -1,0 +1,44 @@
+<p>edit-product works!</p>
+<!--Inventory-->
+<div class=" container">
+    <div class="side-bar"></div>
+    <div class="img">
+        <h3 style="margin:40%;">PRODUCT IMAGE</h3>
+    </div>
+    <div class="description">
+        <form>
+            <div style="padding:10px ;">
+                <label for="PName"><b>Product Name</b></label>
+                <input style="margin-left: 70px;" type="PName" placeholder="Enter Product Name" name="PName" ngModel required #PName="ngModel">
+                <button style="float:right ;">Set category</button> 
+            </div>
+            <div style="margin-top:10px;padding:10px">
+                <label for="PDesc"><b>Product Description</b></label>
+                <textarea style="margin-left: 30px;" placeholder="Enter Product Description" name="PDesc" ngModel required #PDesc="ngModel"></textarea>
+            </div>
+            <div style="padding:10px ;">
+                <label for="price"><b>Price</b></label>
+                <input style="text-align: center;margin-left: 5px;" type="number" placeholder="Enter Price" name="Price" ngModel required #Price="ngModel">
+                <label for="quantity"><b>quantity</b></label>
+                <input style="margin-left: 5px;" type="number" placeholder="Enter quantity" name="quantity" ngModel required #quantity="ngModel">
+                <label for="quantity"><b>Minimum Price</b></label>
+                <input style="margin-left: 5px;" type="number" placeholder="Enter Minimum Price" name="Mprice" ngModel required #Mprice="ngModel">                             
+            </div>
+            <div  style="margin-top:30px;padding:10px">
+                <label for="SSDate"><b>Sale Start Date</b></label>
+                <input style="text-align: center;margin-left: 5px;" type="date" placeholder="Enter Date" name="SSDate" ngModel required #Price="ngModel">
+                <label for="SEDate"><b>Sale Start End</b></label>
+                <input style="margin-left: 5px;" type="date" placeholder="Enter Date" name="SEDate" ngModel required #quantity="ngModel">
+                <label for="SPrice"><b>Sale Price</b></label>
+                <input style="margin-left: 5px;" type="number" placeholder="Enter Sale Price" name="SPrice" ngModel required #SPrice="ngModel">                             
+            </div>
+        </form>
+    </div>
+    <div class="detail">
+        <div>
+            <button style="background-color: green;margin-bottom: 30px;width: 80%;margin-top: 10px;">Add</button>
+            <button style="background-color: azure;margin-bottom: 30px;width: 80%">Save</button>
+            <button style="background-color:red ;margin-bottom: 30px;width: 80%">Delete</button>
+        </div>         
+    </div>
+</div>

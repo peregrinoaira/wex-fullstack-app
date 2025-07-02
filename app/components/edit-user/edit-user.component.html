@@ -1,0 +1,28 @@
+<div class="container">
+  <!-- This is the side for the edit-users field -->
+  <ng-container *ngIf="currentUser.isAdmin">
+    <h2>Admin dashboard</h2>
+    <h3 (click)="blankUser()">New User</h3>
+    <h4>Existing Users:</h4>
+      <p class="userName" *ngFor="let user of usersAll" (click)="handleSeeUser(user)">
+        {{user.username}}
+      <p>
+  </ng-container>
+  
+  <!-- This is the main for the edit-users field -->
+  <div class="editUserMain">
+    <h4>{{selectedUser.username}}</h4>
+    <div class="editUserContainer">
+      <div><label>username</label><input type="text" name="uname_input" [(ngModel)]="selectedUser.username"></div>
+      <div><label>email</label><input type="email" [(ngModel)]="selectedUser.email"></div>
+      <div><label>password</label><input type="password" [(ngModel)]="selectedUser.password"></div>
+      <div *ngIf="currentUser.isAdmin">
+        <div><label>user role</label><input type="text" name="userauth" [(ngModel)]="userAuth"></div>
+      </div>
+       <div>
+        <button (click)="onEditUser()">Submit Changes</button>
+        <button (click)="onDeleteUser()">Delete User</button>
+      </div>
+    </div>
+  </div>
+</div>
